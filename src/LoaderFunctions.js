@@ -39,11 +39,14 @@ function Init(elementName, options) {
 
   if (typeof React === 'undefined') {
     loadjscssfile(options.ReactUrl, 'js',
-      (function ($options) { return function () { initComponent($options); }; })(options));
-  };
+    (function ($options) { return function () { Init(elementName, options); }; })(elementName, options));
+    return void 0;
+    };
 
   if (typeof ReactDOM === 'undefined') {
-    loadjscssfile(options.ReactDOMUrl, 'js', (function ($options) { return function () { initComponent($options); }; })(options));
+    loadjscssfile(options.ReactDOMUrl, 'js',
+    (function ($options) { return function () { Init(elementName, options); }; })(elementName, options));
+    return void 0;
   };
 
   initComponent(options);
