@@ -6,7 +6,7 @@ There is only 1 parameter needed when initializing.
 
 Example usage
 <div id="medal-widget"></div>
-<script src="MedalCountWidget.js"></script>
+<script src="https://ishey4.github.io/MedalCountWidget.js"></script>
 <script type="text/javascript">
    MedalCountWidget.initialize('medal-widget')
 </script>
