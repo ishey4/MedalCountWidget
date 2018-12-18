@@ -294,7 +294,7 @@ function Init(elementName, options) {
   options.ReactUrl = options.ReactUrl || 'https://unpkg.com/react@16/umd/react.production.min.js';
   options.parentContainer = options.parentContainer || parent;
 
-  loadjscssfile('widgetStyles.css', 'css', () => { })
+  loadjscssfile('https://ishey4.github.io/widgetStyles.css', 'css', () => { })
 
   if (typeof React === 'undefined') {
     loadjscssfile(options.ReactUrl, 'js',
