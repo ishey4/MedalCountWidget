@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Medal Count Widget Demo</title>
+    <style>
+      #medal-widget{width:250px;overflow:hidden;border:1px solid black;font-family: sans-serif;margin:0 auto;}
+      h1{text-align: center;}
+      .SpecTable{font-size:25px;width:100%;}
+      .SpecTable tr:hover{background-color:lightGrey;}
+      .SupportingInfo{margin:0 auto;max-width:360px;}
+   </style>
+   </head>
+  <body>
+   <h1>Medal Count Widget Demo</h1>
+   <div id="medal-widget">Loading Widget...</div>
+   <script src="MedalCountWidget.js" onload = "MedalCountWidget.initialize('medal-widget')"></script>
+   <br/>
+   <br/>
+   <div class="SupportingInfo" >
+      <h1>Supporting Docs and code</h1>
+      <table class="SpecTable">
+         <tr> 
+            <td>README:</td>
+            <td><a href="README.txt" target="_blank">README.txt</a></td>
+         </tr>
+         <tr> 
+            <td>Spec: </td>
+            <td><a href="src/MedalCountWidget.pdf" target="_blank">/src/MedalCountWidget.pdf</a></td>
+         </tr>
+         <tr> 
+            <td>Loader: </td>
+            <td><a href="src/LoaderFunctions.js" target="_blank">src/LoaderFunctions.js</a></td>
+         </tr>
+         <tr> 
+            <td>CSS:</td>
+            <td><a href="src/widgetStyles.css" target="_blank">src/widgetStyles.css</a></td>
+         </tr>
+         <tr> 
+            <td>Widget:</td>
+            <td><a href="src/MedalCountWidget.js" target="_blank">src/MedalCountWidget.js</a></td>
+         </tr>
+      </table>
+   </div>
+  </body>
+</html>

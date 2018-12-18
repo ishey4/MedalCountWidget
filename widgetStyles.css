@@ -1,0 +1,75 @@
+.MedalCountWidget {margin: 0 auto; max-width: 260px;}
+.MedalCountWidget th{border-bottom: 2px solid black;}
+.MedalCountWidget td {border-bottom: 1px solid gray;}
+.MedalCountWidget table{border-collapse: collapse}
+.MedalCountWidget .Spacer{width:50px;}
+.MedalCountWidget .totalColumn{font-weight: bold;}
+.MedalCountWidget .DisplayNone{display: none;}
+.MedalCountWidget th.total > div:after{content:"Total";vertical-align: top;}
+.MedalCountWidget th, .MedalCountWidget td{text-align: center;width:auto;padding:3px;}
+.MedalCountWidget .FlagBackground{background-image: url('https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png');background-repeat:no-repeat;width:28px;height:15px;display: inline-block;}
+.MedalCountWidget .MedalCircle{height: 15px;min-width:15px;border-radius: 10px;display: inline-block;margin-top: 3px;font-size: 0px;}
+
+.MedalCountWidget .gold   > div ,
+.MedalCountWidget .silver > div,
+.MedalCountWidget .bronze > div,
+.MedalCountWidget .gold   > div,
+.MedalCountWidget .total  > div {vertical-align: top;cursor:pointer;}
+
+.MedalCountWidget .gold   > div {background-color: gold;}
+.MedalCountWidget .silver > div{background-color: silver;}
+.MedalCountWidget .bronze > div{background-color: #cd7f32 ;}
+.MedalCountWidget .total  > div{font-size: 15px;vertical-align: top;text-transform: capitalize;}
+
+.MedalCountWidget.width1 tr > td:nth-child(4),
+.MedalCountWidget.width1 tr > th:nth-child(4),
+.MedalCountWidget.width2 tr > td:nth-child(3),
+.MedalCountWidget.width2 tr > th:nth-child(3),
+.MedalCountWidget.width3 tr > td:nth-child(1),
+.MedalCountWidget.width3 tr > th:nth-child(1) {display:none;}
+
+.MedalCountWidget [selectedrow = 'gold'] th.gold,
+.MedalCountWidget [selectedrow = 'silver'] th.silver,
+.MedalCountWidget [selectedrow = 'bronze'] th.bronze,
+.MedalCountWidget [selectedrow = 'total'] th.total {border-top:1px solid black;padding-bottom: 4px;}
+
+
+/* Row Numbering. since the rows are stateless, the CSS will have to handle the numbering */
+/* however there can only be a finite amount of countries participating in the olympics */
+.MedalCountWidget [sortdirection="1"] tr:nth-child(2)  > td.Rank:after{content: "1"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(3)  > td.Rank:after{content: "2"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(4)  > td.Rank:after{content: "3"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(5)  > td.Rank:after{content: "4"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(6)  > td.Rank:after{content: "5"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(7)  > td.Rank:after{content: "6"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(8)  > td.Rank:after{content: "7"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(9)  > td.Rank:after{content: "8"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(10) > td.Rank:after{content: "9"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(11) > td.Rank:after{content: "10"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(12) > td.Rank:after{content: "11"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(13) > td.Rank:after{content: "12"}
+.MedalCountWidget [sortdirection="1"] tr:nth-child(14) > td.Rank:after{content: "13"}
+.MedalCountWidget [sortDirection="1"] tr:nth-child(15) > td.Rank:after{content: "14"}
+
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(2)  > td.Rank:after{content: "14"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(3)  > td.Rank:after{content: "13"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(4)  > td.Rank:after{content: "12"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(5)  > td.Rank:after{content: "11"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(6)  > td.Rank:after{content: "10"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(7)  > td.Rank:after{content: "9"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(8)  > td.Rank:after{content: "8"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(9)  > td.Rank:after{content: "7"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(10) > td.Rank:after{content: "6"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(11) > td.Rank:after{content: "5"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(12) > td.Rank:after{content: "4"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(13) > td.Rank:after{content: "3"}
+.MedalCountWidget [sortdirection="-1"] tr:nth-child(14) > td.Rank:after{content: "2"}
+.MedalCountWidget [sortDirection="-1"] tr:nth-child(15) > td.Rank:after{content: "1"}
+
+/* Fun animation to show how React updates the DOM */
+.MedalCountWidget tr{animation: pulse 1s 1;}
+
+@keyframes pulse{
+  0%{opacity: 0;background-color: black;}
+  100%{opacity: 1; background-color: white;}
+}
