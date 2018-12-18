@@ -1,4 +1,4 @@
-.MedalCountWidget {margin: 0 auto; max-width: 260px;}
+.MedalCountWidget {margin: 0 auto; max-width: 260px; text-align:left;}
 .MedalCountWidget th{border-bottom: 2px solid black;}
 .MedalCountWidget td {border-bottom: 1px solid gray;}
 .MedalCountWidget table{border-collapse: collapse}
