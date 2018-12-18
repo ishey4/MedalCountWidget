@@ -9,16 +9,27 @@
       .SpecTable{font-size:25px;width:100%;}
       .SpecTable tr:hover{background-color:lightGrey;}
       .SupportingInfo{margin:0 auto;max-width:360px;}
+      .CodeExample{width: 30em;margin: 0 auto;font-family: monospace;background: #eff0f1;padding: 0px 20px;font-size: 2em;letter-spacing: 1px;}
    </style>
    </head>
   <body>
    <h1>Medal Count Widget Demo</h1>
    <div id="medal-widget">Loading Widget...</div>
    <script src="MedalCountWidget.js" onload = "MedalCountWidget.initialize('medal-widget')"></script>
-   <br/>
-   <br/>
+   <h1>Usage Example</h1>
+   <div class="CodeExample">
+        &lt;div id=&quot;medal-widget&quot;&gt;&lt;/div&gt; 
+        <br/>
+        &lt;script src=&quot;https://ishey4.github.io/MedalCountWidget.js&quot;&gt;&lt;/script&gt; 
+        <br/>
+        &lt;script type=&quot;text/javascript&quot;&gt;
+        <br>
+         &nbsp;&nbsp;&nbsp;MedalCountWidget.initialize('medal-widget');
+         <br/>
+         &lt;/script&gt;
+   </div>
    <div class="SupportingInfo" >
-      <h1>Supporting Docs and code</h1>
+      <h1>Docs and code</h1>
       <table class="SpecTable">
          <tr> 
             <td>README:</td>
@@ -26,7 +37,7 @@
          </tr>
          <tr> 
             <td>Spec: </td>
-            <td><a href="src/MedalCountWidget.pdf" target="_blank">/src/MedalCountWidget.pdf</a></td>
+            <td><a href="src/MedalCountWidget.pdf" target="_blank">src/MedalCountWidget.pdf</a></td>
          </tr>
          <tr> 
             <td>Loader: </td>
