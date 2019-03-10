@@ -61,39 +61,5 @@
          </tr>
       </table>
    </div>
-    <script>
-     var randomChallengeBuffer = new Uint8Array(32);
-        window.crypto.getRandomValues(randomChallengeBuffer);
-
-        var base64id = 'MIIBkzCCATigAwIBAjCCAZMwggE4oAMCAQIwggGTMII='
-        var idBuffer = Uint8Array.from(window.atob(base64id), c=>c.charCodeAt(0))
-
-        var publicKey = {
-            challenge: randomChallengeBuffer,
-
-            rp: { name: "FIDO Example Corporation" },
-
-            user: {
-                id: idBuffer,
-                name: "alice@example.com",
-                displayName: "Alice von Wunderland"
-            },
-
-            attestation: 'direct',
-
-            pubKeyCredParams: [
-                { type: 'public-key',  alg: -7  }, // ES256
-                { type: 'public-key', alg: -257 }  // RS256
-            ]
-        }
-
-        navigator.credentials.create({ publicKey })
-            .then((newCredentialInfo) => {
-                console.log('SUCCESS', newCredentialInfo)
-            })
-            .catch((error) => {
-                console.log('FAIL', error)
-            })
-    </script>
   </body>
 </html>
